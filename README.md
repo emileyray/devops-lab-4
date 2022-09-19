@@ -1,5 +1,9 @@
 # Lab 1: Web Application
 
+![python workflow](https://github.com/emileyray/devops-labs/actions/workflows/python.yml/badge.svg)
+
+![docker workflow](https://github.com/emileyray/devops-labs/actions/workflows/docker.yml/badge.svg)
+
 ## Overview
 
 This is a simple web application that shows current time in Moscow. Time is updated whenever the page is refreshed
@@ -82,6 +86,55 @@ If you want to use a remote image:
 * Run `docker run -d -p 5000:5000 emileyray/dart`
 * Go to [http://127.0.0.1:5000](http://127.0.0.1:5000) in your browser
 * Enjoy!
+
+## Unit Tests
+
+### Python unit tests
+
+The test tests a function that is supposed to return current time
+The test runs the function with an interval of one second and compares the results
+
+* Test is as small as possible
+* The test does not depend on the environment
+* The test is readable
+
+## Workflow
+
+### Python workflow
+
+The project contains a Github Actions workflow for the python app.
+What it does:
+
+* Installs dependencies
+* Lint checks
+* Runs tests
+
+There is also a workflow for docker in the python project.
+What it does:
+
+* Logs in to my account
+* Builds the app
+* Pushes to my DockerHub
+
+Also, the Python app CI runs only if there are changes in the `app_python` folder
+
+### Dart workflow
+
+The project contains a Github Actions workflow for the python app.
+What it does:
+
+* Installs dependencies
+* Lint checks
+* Runs tests
+
+There is also a workflow for docker in the dart project.
+What it does:
+
+* Logs in to my account
+* Builds the app
+* Pushes to my DockerHub
+
+Also, the Dart app CI runs only if there are changes in the `app_dart` folder
 
 ## Contact
 
